@@ -1,16 +1,21 @@
+import styled from "styled-components";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 
 const Layout = () => {
   return (
-    <div>
+    <Wrap>
       <Header />
       <main>
         <p>text</p>
       </main>
       <Footer />
-    </div>
+    </Wrap>
   );
 };
+
+const Wrap = styled.div`
+  height: 100vh;
+`;
 
 export default Layout;
