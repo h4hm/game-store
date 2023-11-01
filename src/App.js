@@ -4,8 +4,10 @@ import theme from "./theme";
 import GlobalStyles from "./theme/GlobalStyles.styles";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages";
-import GamePromo from "./pages/Gamepromo";
+import Support from "./pages/Support";
+import Community from "./pages/Community";
 import News from "./pages/News";
+import GamePromo from "./pages/Gamepromo";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/community" element={<Community />} />
         <Route path="/gamepromo" element={<GamePromo />} />
         <Route path="/news" element={<News />} />
       </Routes>

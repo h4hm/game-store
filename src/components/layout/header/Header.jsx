@@ -1,9 +1,10 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Image } from "@chakra-ui/react";
 // import Gnb from "./Gnb";
 import { CloseIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../../../assets/images/logo3.svg";
 // import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -17,17 +18,19 @@ const Header = () => {
 
   return (
     <HeadWrap toggle={toggle}>
-      <Heading as={"h1"}>Logo</Heading>
+      <Heading as={"h1"}>
+        <Image src={logo} boxSize="30px" alt="로고이미지" />
+      </Heading>
       <NavStyled toggle={toggle}>
         <ul>
           <li className={location.pathname === "/" ? "active" : ""}>
-            <Link to="/">탐색</Link>
+            <Link to="/">스토어</Link>
           </li>
-          <li className={location.pathname === "/gamepromo" ? "active" : ""}>
-            <Link to="/gamepromo">찾아보기</Link>
+          <li className={location.pathname === "/support" ? "active" : ""}>
+            <Link to="/support">고객센터</Link>
           </li>
-          <li className={location.pathname === "/news" ? "active" : ""}>
-            <Link to="/news">새소식</Link>
+          <li className={location.pathname === "/community" ? "active" : ""}>
+            <Link to="/community">커뮤니티</Link>
           </li>
         </ul>
         <div className="toggle-menu" onClick={handToggle}>
@@ -41,7 +44,6 @@ const Header = () => {
 const HeadWrap = styled.div`
   max-width: 1440px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: #7c7c7c;
 
@@ -59,6 +61,11 @@ const NavStyled = styled.nav`
   @media screen and (max-width: 768px) {
     ul {
       display: ${(props) => (props.toggle ? "flex" : "none")};
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
       position: fixed;
       top: 0;
       left: 0;
@@ -70,6 +77,10 @@ const NavStyled = styled.nav`
     }
     .toggle-menu {
       display: block;
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      z-index: 100;
     }
   }
 `;

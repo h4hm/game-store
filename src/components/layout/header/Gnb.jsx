@@ -1,56 +1,40 @@
-import { CloseIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
-import { useState } from "react";
+import { Box, Flex, Input, ListItem, UnorderedList } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 const Gnb = () => {
   const location = useLocation();
 
-  const [toggle, setToggle] = useState(false);
-
-  const handToggle = () => {
-    setToggle(!toggle);
-  };
-
   return (
-    <NavStyled className={toggle ? "navbar expanded" : "navbar"}>
-      <ul>
-        <li className={location.pathname === "/" ? "active" : ""}>
-          <Link to="/">탐색</Link>
-        </li>
-        <li className={location.pathname === "/gamepromo" ? "active" : ""}>
-          <Link to="/gamepromo">찾아보기</Link>
-        </li>
-        <li className={location.pathname === "/news" ? "active" : ""}>
-          <Link to="/news">새소식</Link>
-        </li>
-      </ul>
-      <div className="toggle-menu" onClick={handToggle}>
-        <Icon as={toggle ? CloseIcon : HamburgerIcon} />
-      </div>
-    </NavStyled>
+    <Box>
+      <Flex
+        as="nav"
+        align="center"
+        justify="left"
+        wrap="wrap"
+        w="100%"
+        mb={5}
+        p={5}
+      >
+        <Input placeholder="스토어 검색" width="auto" />
+        <ListStyled>
+          <ListItem className={location.pathname === "/" ? "active" : ""}>
+            <Link to="/">탐색</Link>
+          </ListItem>
+          <ListItem className={location.pathname === "/" ? "active" : ""}>
+            <Link to="/gamepromo">찾아보기</Link>
+          </ListItem>
+          <ListItem className={location.pathname === "/" ? "active" : ""}>
+            <Link to="/news">새소식</Link>
+          </ListItem>
+        </ListStyled>
+      </Flex>
+    </Box>
   );
 };
 
-const NavStyled = styled.nav`
-  ul {
-    display: flex;
-  }
-  .toggle-menu {
-    display: none;
-  }
-  @media screen and (max-width: 768px) {
-    ul {
-      display: none;
-    }
-    li {
-      margin: 1rem 0;
-      padding: 0;
-    }
-    .toggle-menu {
-      display: block;
-    }
-  }
+const ListStyled = styled(UnorderedList)`
+  display: flex;
 `;
 
 export default Gnb;

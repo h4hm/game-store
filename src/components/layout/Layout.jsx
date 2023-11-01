@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
+import Gnb from "./header/Gnb";
 
 const Layout = () => {
   return (
     <Wrap>
       <Header />
-      <main>
-        <p>text</p>
-      </main>
+      <Gnb />
       <Footer />
     </Wrap>
   );
