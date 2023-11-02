@@ -13,8 +13,8 @@ const Gnb = () => {
         justify="left"
         wrap="wrap"
         w="100%"
-        mb={5}
-        p={5}
+        pt={5}
+        pb={5}
       >
         <Input placeholder="스토어 검색" width="auto" />
         <ListStyled>

@@ -42,7 +42,7 @@ const Header = () => {
 };
 
 const HeadWrap = styled.div`
-  max-width: 1440px;
+  /* max-width: 1440px; */
   display: flex;
   align-items: center;
   background: #7c7c7c;
