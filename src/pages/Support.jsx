@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 
 const Support = () => {
   return (
-    <Layout title="support" pagename="support">
+    <Layout>
       <Box></Box>
     </Layout>
   );

@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 
 const Community = () => {
   return (
-    <Layout title="community" pagename="community">
+    <Layout>
       <Box></Box>
     </Layout>
   );

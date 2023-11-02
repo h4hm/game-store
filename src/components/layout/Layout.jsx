@@ -3,11 +3,12 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Gnb from "./header/Gnb";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <Wrap>
       <Header />
       <Gnb />
+      {children}
       <Footer />
     </Wrap>
   );

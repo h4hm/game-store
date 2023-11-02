@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 
 const GamePromo = () => {
   return (
-    <Layout title="gamepromo" pagename="gamepromo">
+    <Layout>
       <Box></Box>
     </Layout>
   );

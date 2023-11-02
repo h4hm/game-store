@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 
 const News = () => {
   return (
-    <Layout title="news" pagename="news">
+    <Layout>
       <Box></Box>
     </Layout>
   );

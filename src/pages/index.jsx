@@ -1,10 +1,10 @@
-import { Box } from "@chakra-ui/react";
 import Layout from "../components/layout/Layout";
+import Thumbslide from "../components/common/Thumbslide";
 
 const Home = () => {
   return (
-    <Layout title="Home" pagename="Home">
-      <Box></Box>
+    <Layout>
+      <Thumbslide />
     </Layout>
   );
 };
