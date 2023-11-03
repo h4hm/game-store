@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   return (
     <Wrap>
       <Header />
-      <Container ml="auto" mr="auto" maxW="1600px" width="75%">
+      <Container ml="auto" mr="auto" maxW="1600px" width={["75%"]}>
         <Gnb />
         {children}
       </Container>

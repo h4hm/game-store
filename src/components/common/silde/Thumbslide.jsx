@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, EffectFade, Navigation, Thumbs } from "swiper/modules";
-import Bgimage1 from "../../../assets/images/bg1.jpg";
-import Bgimage2 from "../../../assets/images/bg2.jpg";
-import Bgimage3 from "../../../assets/images/bg3.jpg";
-import Bgimage4 from "../../../assets/images/bg4.jpg";
-import Bgimage5 from "../../../assets/images/bg5.jpg";
+import slideImage1 from "../../../assets/images/alan.jpg";
+import slideImage2 from "../../../assets/images/cod.jpg";
+import slideImage3 from "../../../assets/images/cyberpunk.jpg";
+import slideImage4 from "../../../assets/images/deadisland2.jpg";
+import slideImage5 from "../../../assets/images/moria.jpg";
 
 function Thumbslide() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -29,26 +29,25 @@ function Thumbslide() {
         className="mySwiper2"
       >
         <SwiperSlide>
-          <Img src={Bgimage1} alt="bg1" />
+          <Img src={slideImage1} alt="alan wake2" />
         </SwiperSlide>
         <SwiperSlide>
-          <Img src={Bgimage2} alt="bg1" />
+          <Img src={slideImage2} alt="call of duty, modern warfare 3" />
         </SwiperSlide>
         <SwiperSlide>
-          <Img src={Bgimage3} alt="bg1" />
+          <Img src={slideImage3} alt="cyberpunk 2077" />
         </SwiperSlide>
         <SwiperSlide>
-          <Img src={Bgimage4} alt="bg1" />
+          <Img src={slideImage4} alt="dead island2" />
         </SwiperSlide>
         <SwiperSlide>
-          <Img src={Bgimage5} alt="bg1" />
+          <Img src={slideImage5} alt="return to moria" />
         </SwiperSlide>
       </ThumbSlideStyled>
 
       <ThumbSlideStyled
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
-        slidesPerView={5}
         freeMode={false}
         direction="vertical"
         watchSlidesVisibility={true}
@@ -57,21 +56,11 @@ function Thumbslide() {
         modules={[FreeMode, EffectFade, Navigation, Thumbs]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Img src={Bgimage1} alt="bg1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img src={Bgimage2} alt="bg1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img src={Bgimage3} alt="bg1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img src={Bgimage4} alt="bg1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img src={Bgimage5} alt="bg1" />
-        </SwiperSlide>
+        <SwiperSlide>slide1</SwiperSlide>
+        <SwiperSlide>slide2</SwiperSlide>
+        <SwiperSlide>slide3</SwiperSlide>
+        <SwiperSlide>slide4</SwiperSlide>
+        <SwiperSlide>slide5</SwiperSlide>
       </ThumbSlideStyled>
     </SlideContainer>
   );
