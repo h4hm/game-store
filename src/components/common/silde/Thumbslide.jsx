@@ -49,6 +49,7 @@ function Thumbslide() {
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
         freeMode={false}
+        slidesPerView={5}
         direction="vertical"
         watchSlidesVisibility={true}
         watchSlidesProgress={true}
