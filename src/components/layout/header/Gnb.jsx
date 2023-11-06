@@ -12,12 +12,12 @@ const Gnb = () => {
         align="center"
         justify="left"
         wrap="wrap"
+        gap={3}
         w="100%"
-        pt={5}
-        pb={5}
+        h="100px"
       >
         <Input placeholder="스토어 검색" width="auto" />
-        <ListStyled>
+        <ListStyled gap={5}>
           <ListItem className={location.pathname === "/" ? "active" : ""}>
             <Link to="/">탐색</Link>
           </ListItem>

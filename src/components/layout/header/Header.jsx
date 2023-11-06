@@ -1,10 +1,22 @@
-import { Heading, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Heading,
+  Image,
+  List,
+  ListItem,
+} from "@chakra-ui/react";
 // import Gnb from "./Gnb";
 import { CloseIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
+import { RiGlobalLine } from "react-icons/ri";
+import { BiUser } from "react-icons/bi";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../../assets/images/logo3.svg";
+
 // import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -17,44 +29,56 @@ const Header = () => {
   };
 
   return (
-    <HeadWrap toggle={toggle}>
+    <Flex
+      toggle={toggle}
+      alignItems={"center"}
+      backgroundColor={"#eeeeee"}
+      gap={10}
+      h={"72px"}
+      p={"20px 24px"}
+    >
       <Heading as={"h1"}>
         <Image src={logo} boxSize="30px" alt="로고이미지" />
       </Heading>
-      <NavStyled toggle={toggle}>
-        <ul>
-          <li className={location.pathname === "/" ? "active" : ""}>
+      <StackNav as={"nav"} toggle={toggle}>
+        <List display={"flex"} alignItems={"center"} gap={5}>
+          <ListItem className={location.pathname === "/" ? "active" : ""}>
             <Link to="/">스토어</Link>
-          </li>
-          <li className={location.pathname === "/support" ? "active" : ""}>
+          </ListItem>
+          <ListItem
+            className={location.pathname === "/support" ? "active" : ""}
+          >
             <Link to="/support">고객센터</Link>
-          </li>
-          <li className={location.pathname === "/community" ? "active" : ""}>
+          </ListItem>
+          <ListItem
+            className={location.pathname === "/community" ? "active" : ""}
+          >
             <Link to="/community">커뮤니티</Link>
-          </li>
-        </ul>
-        <div className="toggle-menu" onClick={handToggle}>
+          </ListItem>
+        </List>
+        <Box
+          className="tool-box"
+          display={"flex"}
+          alignItems={"center"}
+          gap={5}
+        >
+          <RiGlobalLine size={"24px"} />
+          <BiUser size={"24px"} />
+          <Button colorScheme="blue">다운로드</Button>
+        </Box>
+        <Box className="toggle-menu" onClick={handToggle}>
           <Icon as={toggle ? CloseIcon : HamburgerIcon} />
-        </div>
-      </NavStyled>
-    </HeadWrap>
+        </Box>
+      </StackNav>
+    </Flex>
   );
 };
 
-const HeadWrap = styled.div`
-  /* max-width: 1440px; */
+const StackNav = styled(HStack)`
   display: flex;
   align-items: center;
-  background: #7c7c7c;
-
-  @media screen and (max-width: 768px) {
-  }
-`;
-
-const NavStyled = styled.nav`
-  ul {
-    display: flex;
-  }
+  justify-content: space-between;
+  flex-grow: 1;
   .toggle-menu {
     display: none;
   }
@@ -71,6 +95,9 @@ const NavStyled = styled.nav`
       left: 0;
       flex-direction: column;
     }
+    .tool-box {
+      display: ${(props) => (props.toggle ? "flex" : "none")};
+    }
     li {
       margin: 1rem 0;
       padding: 0;
@@ -78,7 +105,7 @@ const NavStyled = styled.nav`
     .toggle-menu {
       display: block;
       position: absolute;
-      top: 5px;
+      top: 20px;
       right: 20px;
       z-index: 100;
     }
