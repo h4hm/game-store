@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Flex,
   HStack,
   Heading,
@@ -16,6 +15,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../../assets/images/logo3.svg";
+import Buttons from "../../common/button/Buttons";
 
 // import { Link } from "react-router-dom";
 
@@ -64,7 +64,7 @@ const Header = () => {
         >
           <RiGlobalLine size={"24px"} />
           <BiUser size={"24px"} />
-          <Button colorScheme="blue">다운로드</Button>
+          <Buttons styleType="download">다운로드</Buttons>
         </Box>
         <Box className="toggle-menu" onClick={handToggle}>
           <Icon as={toggle ? CloseIcon : HamburgerIcon} />

@@ -76,5 +76,13 @@ const GlobalStyles = createGlobalStyle`
         line-height: 0;
         text-indent: -9999px;
     }
+    .hidden {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        text-indent: -9999px;
+    }
 `;
 export default GlobalStyles;

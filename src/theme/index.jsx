@@ -2,6 +2,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { textTheme } from "./components/text";
 import { tableTheme } from "./components/table";
 import { progressTheme } from "./components/progress";
+import { buttonTheme } from "./components/button";
 // import { containerTheme } from './components/container';
 
 const breakpoints = {
@@ -19,6 +20,7 @@ const theme = extendTheme({
     Text: textTheme,
     Table: tableTheme,
     Progress: progressTheme,
+    Button: buttonTheme,
   },
   styles: {
     global: {

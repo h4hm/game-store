@@ -1,8 +1,8 @@
-import { Box, Img } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import styled from "styled-components";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, EffectFade, Thumbs } from "swiper/modules";
+import { Autoplay, FreeMode, Thumbs } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/free-mode";
@@ -17,6 +17,47 @@ import thumbsimg2 from "../../../assets/images/item/assasin-item.jpg";
 import thumbsimg3 from "../../../assets/images/item/destiny-item.jpg";
 import thumbsimg4 from "../../../assets/images/item/fortnite-item.jpg";
 import thumbsimg5 from "../../../assets/images/item/evil-item.jpg";
+import SlideContent from "./SlideContent";
+import logoimg1 from "../../../assets/images/alan-logo.png";
+import logoimg2 from "../../../assets/images/mw3-logo4.png";
+import logoimg3 from "../../../assets/images/cyberpunk-logo.png";
+import logoimg4 from "../../../assets/images/deadisland2-logo.png";
+import logoimg5 from "../../../assets/images/moria-logo.png";
+
+const slideData = [
+  {
+    src: slideImage1,
+    alt: "alan wake2",
+    contsrc: logoimg1,
+    contxt:
+      "Remedy Entertainment의 최신 심리 스릴러 게임에서 일련의 제의적인 살인사건이 Bright Falls를 위협합니다.",
+  },
+
+  {
+    src: slideImage2,
+    alt: "call of duty, modern warfare 3",
+    contsrc: logoimg2,
+    contxt: "text",
+  },
+  {
+    src: slideImage3,
+    alt: "cyberpunk 2077",
+    contsrc: logoimg3,
+    contxt: "text",
+  },
+  {
+    src: slideImage4,
+    alt: "dead island2",
+    contsrc: logoimg4,
+    contxt: "text",
+  },
+  {
+    src: slideImage5,
+    alt: "return to moria",
+    contsrc: logoimg5,
+    contxt: "text",
+  },
+];
 
 const thumbArr = [
   {
@@ -50,59 +91,21 @@ function Thumbslide() {
       h={{ base: "400px", sm: "400px", md: "500px", lg: "700px" }}
     >
       <ThumbSlideStyled
-        effect={"fade"}
-        loop={true}
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
-        modules={[FreeMode, EffectFade, Thumbs]}
+        slidesPerView={1}
+        spaceBetween={1}
+        speed={300}
+        loop={true}
+        modules={[Autoplay, FreeMode, Thumbs]}
         className="mySwiper2"
       >
-        <SwiperSlide>
-          <Img
-            src={slideImage1}
-            boxSize="100%"
-            objectFit="cover"
-            objectPosition="center"
-            alt="alan wake2"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img
-            src={slideImage2}
-            boxSize="100%"
-            objectFit="cover"
-            objectPosition="center"
-            alt="call of duty, modern warfare 3"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img
-            src={slideImage3}
-            boxSize="100%"
-            objectFit="cover"
-            objectPosition="center"
-            alt="cyberpunk 2077"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img
-            src={slideImage4}
-            boxSize="100%"
-            objectFit="cover"
-            objectPosition="center"
-            alt="dead island2"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Img
-            src={slideImage5}
-            boxSize="100%"
-            objectFit="cover"
-            objectPosition="center"
-            alt="return to moria"
-          />
-        </SwiperSlide>
+        {slideData.map((slidedata, index) => (
+          <SwiperSlide key={index}>
+            <SlideContent slidedata={slidedata} />
+          </SwiperSlide>
+        ))}
       </ThumbSlideStyled>
 
       <ThumbSlideStyled
@@ -111,10 +114,7 @@ function Thumbslide() {
         freeMode={true}
         slidesPerView={5}
         direction="vertical"
-        watchSlidesVisibility={true}
-        watchSlidesProgress={true}
-        watchOverflow={true}
-        modules={[FreeMode, EffectFade, Thumbs]}
+        modules={[Autoplay, FreeMode, Thumbs]}
         className="mySwiper"
       >
         {thumbArr.map((thumbdata, index) => (
@@ -134,10 +134,16 @@ const SlideContainer = styled(Box)`
     margin-right: 10px;
     border-radius: 15px;
     .swiper-wrapper {
-      /* display: flex; */
-      position: relative;
       width: 100%;
       height: 100%;
+      .swiper-slide {
+        position: relative;
+        opacity: 0;
+      }
+      .swiper-slide-active {
+        opacity: 1;
+        transition: opacity 800ms linear;
+      }
     }
   }
   .mySwiper {
@@ -153,7 +159,6 @@ const ThumbSlideStyled = styled(Swiper)`
 
   .swiper-slide {
     text-align: center;
-    background-color: #eeeeee;
     border-radius: 15px;
   }
 `;
