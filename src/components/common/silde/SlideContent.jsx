@@ -7,6 +7,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { RiAddCircleLine } from "react-icons/ri";
+import styled from "styled-components";
 
 const SlideContent = (props) => {
   return (
@@ -18,39 +20,51 @@ const SlideContent = (props) => {
         objectPosition="center"
         alt={props.slidedata.alt}
       />
-      <Box
+      <VStack
         position={"absolute"}
+        alignItems={"flex-start"}
         bottom={"30%"}
+        spacing={10}
         left={"50px"}
         zIndex={10}
         color={"#fff"}
       >
         <Img
           src={props.slidedata.contsrc}
-          boxSize="55%"
+          boxSize="30%"
           alt={props.slidedata.alt}
         />
+        {/* <Box
+          w={"100%"}
+          style={{ backgroundImage: `url(${props.slidedata.contsrc})` }}
+        ></Box> */}
         <Heading className="hidden" as={"h3"}>
           {props.slidedata.alt}
         </Heading>
-        <Box textAlign={"left"} mt={"50px"}>
-          <Text as={"span"} textAlign={"left"}>
-            지금 이용가능
-          </Text>
-          <Text w={"400px"} mt={"10px"}>
-            {props.slidedata.contxt}
-          </Text>
+        <Box spacing={3} textAlign={"left"}>
+          <Text as={"span"}>지금 이용가능</Text>
+          <Text>{props.slidedata.contxt}</Text>
         </Box>
-        <VStack textAlign={"left"} alignItems={"left"}>
+        <Box spacing={3} textAlign={"left"}>
           <Text>출시가격</Text>
           <ButtonGroup>
             <Button>구매하기</Button>
-            <Button>위시리스트에 추가</Button>
+            <Button
+              variant="ghost"
+              _hover={{ bg: "rgb(221, 221, 221, .5)" }}
+              color={"white"}
+            >
+              <IconStyled size={"20px"} /> 위시리스트에 추가
+            </Button>
           </ButtonGroup>
-        </VStack>
-      </Box>
+        </Box>
+      </VStack>
     </Box>
   );
 };
+
+const IconStyled = styled(RiAddCircleLine)`
+  margin-right: 5px;
+`;
 
 export default SlideContent;
