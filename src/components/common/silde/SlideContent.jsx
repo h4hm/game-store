@@ -23,15 +23,16 @@ const SlideContent = (props) => {
       <VStack
         position={"absolute"}
         alignItems={"flex-start"}
-        bottom={"30%"}
-        spacing={10}
+        bottom={"20%"}
         left={"50px"}
+        w={"400px"}
+        spacing={8}
         zIndex={10}
         color={"#fff"}
       >
         <Img
           src={props.slidedata.contsrc}
-          boxSize="30%"
+          boxSize="65%"
           alt={props.slidedata.alt}
         />
         {/* <Box
@@ -43,11 +44,11 @@ const SlideContent = (props) => {
         </Heading>
         <Box spacing={3} textAlign={"left"}>
           <Text as={"span"}>지금 이용가능</Text>
-          <Text>{props.slidedata.contxt}</Text>
+          <Text mt={"10px"}>{props.slidedata.contxt}</Text>
         </Box>
         <Box spacing={3} textAlign={"left"}>
           <Text>출시가격</Text>
-          <ButtonGroup>
+          <ButtonGroup mt={"10px"}>
             <Button>구매하기</Button>
             <Button
               variant="ghost"

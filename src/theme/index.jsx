@@ -3,6 +3,8 @@ import { textTheme } from "./components/text";
 import { tableTheme } from "./components/table";
 import { progressTheme } from "./components/progress";
 import { buttonTheme } from "./components/button";
+import { menuTheme } from "./components/menu";
+import { inputTheme } from "./components/input";
 // import { containerTheme } from './components/container';
 
 const breakpoints = {
@@ -21,6 +23,8 @@ const theme = extendTheme({
     Table: tableTheme,
     Progress: progressTheme,
     Button: buttonTheme,
+    Menu: menuTheme,
+    Input: inputTheme,
   },
   styles: {
     global: {
@@ -30,14 +34,14 @@ const theme = extendTheme({
       },
       body: {
         bg: "white",
-        fontFamily: `'inter', sans-serif`,
+        fontFamily: `'Pretendard', 'inter', sans-serif`,
         fontSize: "16px",
         fontWeight: "400",
-        color: "#0a0a0a",
+        color: "#1D1D1D",
       },
       // styles for the `a`
       a: {
-        color: "#0a0a0a",
+        color: "#1D1D1D",
         _hover: {
           textDecoration: "none !important",
         },
@@ -51,9 +55,11 @@ const theme = extendTheme({
     4: "25px",
   },
   colors: {
-    primary: "#4318FF",
-    secondary_grey_700: "#707EAE",
-    Secondary_Grey_600: "#A3AED0",
+    Primary: "#4F4CFF",
+    Primary_grey: "#1D1D1D",
+    Secondary_grey: "#6E6E6E",
+    Third_grey: "#b9becb",
+    Background_grey: "#f8f9fb",
   },
 });
 

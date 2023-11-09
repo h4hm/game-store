@@ -10,11 +10,11 @@ const Buttons = ({ styleType, children }) => {
 const ButtonStyled = styled.button`
   &.download {
     font-size: 14px;
-    background: #5e5df0;
+    background: var(--primary);
     border-radius: 999px;
-    box-shadow: #5e5df0 0 10px 20px -10px;
+    box-shadow: var(--primary) 0 10px 20px -10px;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--white);
     outline: 0 solid transparent;
     padding: 8px 18px;
     user-select: none;

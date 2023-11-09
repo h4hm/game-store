@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Pretendard-100";
+  font-weight: 100;
+  src: url("./fonts/Pretendard-Thin.woff") format(‘woff’);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Pretendard-200";
+  font-weight: 200;
+  src: url("./fonts/Pretendard-SemiBold.woff") format(‘woff’);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Pretendard-300";
+  font-weight: 300;
+  src: url("./fonts/Pretendard-Regular.woff") format(‘woff’);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "Pretendard-400";
+  font-weight: 400;
+  src: url("./fonts/Pretendard-Medium.woff") format(‘woff’);
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "Pretendard-500";
+  font-weight: 500;
+  src: url("./fonts/Pretendard-Light.woff") format(‘woff’);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "Pretendard-600";
+  font-weight: 600;
+  src: url("./fonts/Pretendard-ExtraLight.woff") format(‘woff’);
+}
+
+@font-face {
+  font-family: "Pretendard-700";
+  font-weight: 700;
+  src: url("./fonts/Pretendard-ExtraBold.woff") format(‘woff’);
+}
+
+@font-face {
+  font-family: "Pretendard-800";
+  font-weight: 800;
+  src: url("./fonts/Pretendard-Bold.woff") format(‘woff’);
+}
+
+@font-face {
+  font-family: "Pretendard-900";
+  font-weight: 900;
+  src: url("./fonts/Pretendard-Black.woff") format(‘woff’);
 }

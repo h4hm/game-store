@@ -6,6 +6,12 @@ import {
   Image,
   List,
   ListItem,
+  Menu,
+  MenuButton,
+  MenuList,
+  IconButton,
+  MenuItemOption,
+  MenuOptionGroup,
 } from "@chakra-ui/react";
 // import Gnb from "./Gnb";
 import { CloseIcon, HamburgerIcon, Icon } from "@chakra-ui/icons";
@@ -41,7 +47,14 @@ const Header = () => {
         <Image src={logo} boxSize="30px" alt="로고이미지" />
       </Heading>
       <StackNav as={"nav"} toggle={toggle}>
-        <List display={"flex"} alignItems={"center"} gap={5}>
+        <List
+          display={"flex"}
+          alignItems={"center"}
+          gap={6}
+          fontSize={{ base: "14px", lg: "16px" }}
+          fontWeight={600}
+          color={"Secondary_grey"}
+        >
           <ListItem className={location.pathname === "/" ? "active" : ""}>
             <Link to="/">스토어</Link>
           </ListItem>
@@ -62,7 +75,20 @@ const Header = () => {
           alignItems={"center"}
           gap={5}
         >
-          <RiGlobalLine size={"24px"} />
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<RiGlobalLine size={"24px"} />}
+              variant="ghost"
+            />
+            <MenuList>
+              <MenuOptionGroup defaultValue="asc" type="radio">
+                <MenuItemOption value="asc">한국어</MenuItemOption>
+                <MenuItemOption value="desc">English</MenuItemOption>
+              </MenuOptionGroup>
+            </MenuList>
+          </Menu>
           <BiUser size={"24px"} />
           <Buttons styleType="download">다운로드</Buttons>
         </Box>
@@ -82,6 +108,16 @@ const StackNav = styled(HStack)`
   .toggle-menu {
     display: none;
   }
+  li.active {
+    color: var(--primary);
+  }
+  a:hover,
+  svg:hover {
+    color: var(--primary);
+    font-weight: 800;
+    transition: all 200ms ease-in-out;
+  }
+
   @media screen and (max-width: 768px) {
     ul {
       display: ${(props) => (props.toggle ? "flex" : "none")};

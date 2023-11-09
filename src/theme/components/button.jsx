@@ -1,6 +1,6 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/styled-system";
 import { mode, transparentize } from "@chakra-ui/theme-tools";
-// import { runIfFn } from "../utils/run-if-fn";
+import { runIfFn } from "../utils/run-if-fn";
 
 const baseStyle = defineStyle({
   lineHeight: "1.2",
@@ -57,15 +57,15 @@ const variantOutline = defineStyle((props) => {
   return {
     border: "1px solid",
     borderColor: c === "gray" ? borderColor : "currentColor",
-    // ".chakra-button__group[data-attached][data-orientation=horizontal] > &:not(:last-of-type)":
-    //   {
-    //     marginEnd: "-1px",
-    //   },
-    // ".chakra-button__group[data-attached][data-orientation=vertical] > &:not(:last-of-type)":
-    //   {
-    //     marginBottom: "-1px",
-    //   },
-    // ...runIfFn(variantGhost, props),
+    ".chakra-button__group[data-attached][data-orientation=horizontal] > &:not(:last-of-type)":
+      {
+        marginEnd: "-1px",
+      },
+    ".chakra-button__group[data-attached][data-orientation=vertical] > &:not(:last-of-type)":
+      {
+        marginBottom: "-1px",
+      },
+    ...runIfFn(variantGhost, props),
   };
 });
 

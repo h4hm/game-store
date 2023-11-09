@@ -1,11 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import Layout from "../components/layout/Layout";
+import Header from "../components/layout/header/Header";
 
 const Community = () => {
   return (
-    <Layout>
+    <>
+      <Header />
       <Box></Box>
-    </Layout>
+    </>
   );
 };
 

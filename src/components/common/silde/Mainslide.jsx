@@ -138,11 +138,11 @@ const SlideContainer = styled(Box)`
       height: 100%;
       .swiper-slide {
         position: relative;
-        opacity: 0;
+        opacity: 1;
       }
       .swiper-slide-active {
         opacity: 1;
-        transition: opacity 800ms linear;
+        transition: opacity 400ms linear;
       }
     }
   }

@@ -3,13 +3,18 @@ const GlobalStyles = createGlobalStyle`
 
 
     :root {
-        --primary: #4318FF;
+        --primary: #4F4CFF;
         --primary-dark: #2B3674;
         --S_Light: #CBC8EC;
         --primary-light: rgba(90, 84, 164, 0.80);
         --secondary-grey-600: #A3AED0;
         --Secondary-grey-300: #F4F7FE;
         
+        --primary-grey: #1D1D1D;
+        --secondary-grey: #6E6E6E;
+        --third-grey: #b9becb;
+        --bg-grey: #f8f9fb;
+
 
         --secondary: #FCA311;
         --secondary-light: #FFBA32;
@@ -59,9 +64,9 @@ const GlobalStyles = createGlobalStyle`
     /* 기본 폰트 설정 */
     body, html {
         line-height: 1.5;
-        font-family: "Poppins", "Malgun Gothic", "맑은 고딕", sans-serif;
+        font-family: "Pretendard", "inter", "Malgun Gothic", "맑은 고딕", sans-serif;
         font-weight: 400;
-        color: #333;
+        color: #1D1D1D;
       }
     ul, ol, li {
         list-style: none;
