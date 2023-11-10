@@ -19,11 +19,12 @@ const SlideContent = (props) => {
         objectFit="cover"
         objectPosition="center"
         alt={props.slidedata.alt}
+        borderRadius={"38px"}
       />
       <VStack
         position={"absolute"}
         alignItems={"flex-start"}
-        bottom={"20%"}
+        bottom={"15%"}
         left={"50px"}
         w={"400px"}
         spacing={8}
@@ -32,7 +33,7 @@ const SlideContent = (props) => {
       >
         <Img
           src={props.slidedata.contsrc}
-          boxSize="65%"
+          boxSize="75%"
           alt={props.slidedata.alt}
         />
         {/* <Box

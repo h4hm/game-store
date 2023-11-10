@@ -38,9 +38,8 @@ const Header = () => {
     <Flex
       toggle={toggle}
       alignItems={"center"}
-      backgroundColor={"#eeeeee"}
       gap={10}
-      h={"72px"}
+      h={"60px"}
       p={"20px 24px"}
     >
       <Heading as={"h1"}>
@@ -125,7 +124,6 @@ const StackNav = styled(HStack)`
       align-items: center;
       width: 100vw;
       height: 100vh;
-      background-color: #fff;
       position: fixed;
       top: 0;
       left: 0;

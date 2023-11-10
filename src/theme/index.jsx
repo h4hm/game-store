@@ -5,6 +5,7 @@ import { progressTheme } from "./components/progress";
 import { buttonTheme } from "./components/button";
 import { menuTheme } from "./components/menu";
 import { inputTheme } from "./components/input";
+import { cardTheme } from "./components/card";
 // import { containerTheme } from './components/container';
 
 const breakpoints = {
@@ -18,13 +19,13 @@ const breakpoints = {
 const theme = extendTheme({
   breakpoints,
   components: {
-    // Container: containerTheme,
     Text: textTheme,
     Table: tableTheme,
     Progress: progressTheme,
     Button: buttonTheme,
     Menu: menuTheme,
     Input: inputTheme,
+    Card: cardTheme,
   },
   styles: {
     global: {

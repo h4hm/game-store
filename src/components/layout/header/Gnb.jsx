@@ -28,11 +28,15 @@ const Gnb = () => {
         <InputGroup width="auto">
           <Input
             placeholder="스토어 검색"
-            variant={"customStyle"}
-            _placeholder={{ opacity: 1, color: "Third_grey" }}
+            variant={"filled"}
+            borderRadius={"20px"}
+            _placeholder={{
+              opacity: 1,
+              color: "Third_grey",
+            }}
           />
           <InputRightElement>
-            <BiSearch color={"var(--primary)"} size={"20px"} />
+            <BiSearch color={"Third_grey"} size={"20px"} />
           </InputRightElement>
         </InputGroup>
         <ListStyled

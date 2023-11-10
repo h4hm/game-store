@@ -12,7 +12,7 @@ const ButtonStyled = styled.button`
     font-size: 14px;
     background: var(--primary);
     border-radius: 999px;
-    box-shadow: var(--primary) 0 10px 20px -10px;
+    /* box-shadow: var(--primary) 0 10px 20px -10px; */
     box-sizing: border-box;
     color: var(--white);
     outline: 0 solid transparent;

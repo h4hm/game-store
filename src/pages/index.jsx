@@ -1,14 +1,18 @@
 import Layout from "../components/layout/Layout";
-import Thumbslide from "../components/common/silde/Mainslide";
+import MainSlide from "../components/common/silde/Mainslide";
 import { VStack } from "@chakra-ui/react";
 import ItemSlide from "../components/common/silde/ItemSlide";
+import HorBox from "../components/common/itembox/HorBox";
+import BigBox from "../components/common/itembox/BigBox";
 
 const Home = () => {
   return (
     <Layout>
-      <VStack spacing="100px">
-        <Thumbslide />
+      <VStack spacing="60px">
+        <MainSlide />
         <ItemSlide />
+        <HorBox />
+        <BigBox />
       </VStack>
     </Layout>
   );

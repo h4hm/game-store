@@ -8,11 +8,11 @@ import {
   Text,
 } from "@chakra-ui/react";
 import DiscountBadge from "../tag/DiscountBadge";
-import ItemThumb from "../../../assets/images/Prehistoric_Kingdom_thumb.jpg";
+import ItemThumb from "../../../assets/images/item/warframe-item.jpg";
 
 const VerBox = () => {
   return (
-    <Card width={"100%"}>
+    <Card width={"100%"} variant={"unstyled"}>
       <CardBody p={"0px"}>
         <Image
           src={ItemThumb}
@@ -26,7 +26,7 @@ const VerBox = () => {
           </Text>
         </Stack>
       </CardBody>
-      <CardFooter p={"15px 0px"}>
+      <CardFooter p={"10px 0px"}>
         <Flex gap={3}>
           <DiscountBadge />
           <Text>W11,440</Text>
