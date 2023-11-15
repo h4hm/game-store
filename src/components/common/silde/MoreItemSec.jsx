@@ -1,19 +1,10 @@
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Image,
-  Stack,
-  HStack,
-  Text,
-  Flex,
-} from "@chakra-ui/react";
+import { Card, CardBody, Image, Stack, HStack, Text } from "@chakra-ui/react";
 import Moreitem1 from "../../../assets/images/item/free.jpg";
 
 const MoreItemSec = () => {
   return (
-    <HStack w={"100%"} pt={"25px"} gap={7}>
-      <Card width={"33%"} h={"300px"} variant={"unstyled"}>
+    <HStack w={"100%"} gap={7} pb={"150px"}>
+      <Card width={"33%"} h={"400px"} variant={"unstyled"}>
         <CardBody p={"0px"}>
           <Image
             src={Moreitem1}
@@ -24,20 +15,15 @@ const MoreItemSec = () => {
             h={"300px"}
             objectFit="cover"
           />
-          <Stack pt={"10px"}>
+          <Stack pt={"10px"} h={"100px"}>
             <Text fontSize={"14px"}>기본게임</Text>
             <Text as={"strong"} fontSize={"16px"}>
               Prehistoric Kingdom
             </Text>
           </Stack>
         </CardBody>
-        <CardFooter p={"10px 0px"}>
-          <Flex gap={3}>
-            <Text>W11,440</Text>
-          </Flex>
-        </CardFooter>
       </Card>
-      <Card width={"33%"} h={"300px"} variant={"unstyled"}>
+      <Card width={"33%"} h={"400px"} variant={"unstyled"}>
         <CardBody p={"0px"}>
           <Image
             src={Moreitem1}
@@ -45,23 +31,18 @@ const MoreItemSec = () => {
             borderRadius={"15px"}
             position={"relative"}
             w={"100%"}
-            h={"100%"}
+            h={"300px"}
             objectFit="cover"
           />
-          <Stack pt={"10px"}>
+          <Stack pt={"10px"} h={"100px"}>
             <Text fontSize={"14px"}>기본게임</Text>
             <Text as={"strong"} fontSize={"16px"}>
               Prehistoric Kingdom
             </Text>
           </Stack>
         </CardBody>
-        <CardFooter p={"10px 0px"}>
-          <Flex gap={3}>
-            <Text>W11,440</Text>
-          </Flex>
-        </CardFooter>
       </Card>
-      <Card width={"33%"} h={"300px"} variant={"unstyled"}>
+      <Card width={"33%"} h={"400px"} variant={"unstyled"}>
         <CardBody p={"0px"}>
           <Image
             src={Moreitem1}
@@ -69,21 +50,16 @@ const MoreItemSec = () => {
             borderRadius={"15px"}
             position={"relative"}
             w={"100%"}
-            h={"100%"}
+            h={"300px"}
             objectFit="cover"
           />
-          <Stack pt={"10px"}>
+          <Stack pt={"10px"} h={"100px"}>
             <Text fontSize={"14px"}>기본게임</Text>
             <Text as={"strong"} fontSize={"16px"}>
               Prehistoric Kingdom
             </Text>
           </Stack>
         </CardBody>
-        <CardFooter p={"10px 0px"}>
-          <Flex gap={3}>
-            <Text>W11,440</Text>
-          </Flex>
-        </CardFooter>
       </Card>
     </HStack>
   );

@@ -23,9 +23,7 @@ const ItemChart = () => {
             <Heading as={"h3"} fontSize={"24px"} fontWeight={600}>
               베스트셀러
             </Heading>
-            <Button colorScheme="gray" variant="outline">
-              더보기
-            </Button>
+            <Button colorScheme="gray">더보기</Button>
           </Flex>
           <List mt={"30px"}>
             <ListItem p={"15px"}>
@@ -109,9 +107,7 @@ const ItemChart = () => {
             <Heading as={"h3"} fontSize={"24px"} fontWeight={600}>
               베스트셀러
             </Heading>
-            <Button colorScheme="gray" variant="outline">
-              더보기
-            </Button>
+            <Button colorScheme="gray">더보기</Button>
           </Flex>
           <List mt={"30px"}>
             <ListItem p={"15px"}>
@@ -191,9 +187,7 @@ const ItemChart = () => {
             <Heading as={"h3"} fontSize={"24px"} fontWeight={600}>
               베스트셀러
             </Heading>
-            <Button colorScheme="gray" variant="outline">
-              더보기
-            </Button>
+            <Button colorScheme="gray">더보기</Button>
           </Flex>
           <List mt={"30px"}>
             <ListItem p={"15px"}>

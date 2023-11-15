@@ -25,7 +25,7 @@ const SlideContent = (props) => {
         position={"absolute"}
         alignItems={"flex-start"}
         bottom={"15%"}
-        left={"50px"}
+        left={"80px"}
         w={"400px"}
         spacing={8}
         zIndex={10}

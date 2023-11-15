@@ -28,22 +28,20 @@ const Gnb = () => {
         <InputGroup width="auto">
           <Input
             placeholder="스토어 검색"
+            color={"white"}
             variant={"filled"}
             borderRadius={"20px"}
-            _placeholder={{
-              opacity: 1,
-              color: "Third_grey",
-            }}
+            _placeholder={{ opacity: 0.4, color: "inherit" }}
           />
           <InputRightElement>
-            <BiSearch color={"Third_grey"} size={"20px"} />
+            <BiSearch color={"white"} size={"20px"} />
           </InputRightElement>
         </InputGroup>
         <ListStyled
           gap={6}
           fontSize={{ base: "14px", lg: "16px" }}
-          fontWeight={600}
-          color={"Secondary_grey"}
+          fontWeight={400}
+          color={"white"}
         >
           <ListItem className={location.pathname === "/" ? "active" : ""}>
             <Link to="/">탐색</Link>
@@ -66,6 +64,7 @@ const ListStyled = styled(UnorderedList)`
   display: flex;
   li.active {
     color: var(--primary);
+    font-weight: 800;
   }
   a:hover {
     color: var(--primary);

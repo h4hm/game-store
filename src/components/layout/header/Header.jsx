@@ -20,7 +20,7 @@ import { BiUser } from "react-icons/bi";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../../assets/images/logo3.svg";
+import logo from "../../../assets/images/logo4.svg";
 import Buttons from "../../common/button/Buttons";
 
 // import { Link } from "react-router-dom";
@@ -51,8 +51,8 @@ const Header = () => {
           alignItems={"center"}
           gap={6}
           fontSize={{ base: "14px", lg: "16px" }}
-          fontWeight={600}
-          color={"Secondary_grey"}
+          fontWeight={400}
+          color={"white"}
         >
           <ListItem className={location.pathname === "/" ? "active" : ""}>
             <Link to="/">스토어</Link>
@@ -88,7 +88,11 @@ const Header = () => {
               </MenuOptionGroup>
             </MenuList>
           </Menu>
-          <BiUser size={"24px"} />
+          <IconButton
+            aria-label="User"
+            variant="ghost"
+            icon={<BiUser size={"24px"} />}
+          />
           <Buttons styleType="download">다운로드</Buttons>
         </Box>
         <Box className="toggle-menu" onClick={handToggle}>
@@ -109,9 +113,9 @@ const StackNav = styled(HStack)`
   }
   li.active {
     color: var(--primary);
+    font-weight: 800;
   }
-  a:hover,
-  svg:hover {
+  a:hover {
     color: var(--primary);
     font-weight: 800;
     transition: all 200ms ease-in-out;

@@ -14,21 +14,6 @@ const $fontSize = cssVar("input-font-size");
 const $padding = cssVar("input-padding");
 const $borderRadius = cssVar("input-border-radius");
 
-const customStyle = definePartsStyle({
-  field: {
-    border: "2px solid",
-    borderRadius: "20px",
-    borderColor: "Primary",
-    _disabled: {
-      opacity: 0.4,
-      cursor: "not-allowed",
-    },
-    _focusVisible: {
-      boxShadow: "rgba(149, 157, 165, 0.5) 0px 8px 24px",
-    },
-  },
-});
-
 const baseStyle = definePartsStyle({
   addon: {
     height: $height.reference,
@@ -145,15 +130,15 @@ const variantOutline = definePartsStyle((props) => {
 
 const variantFilled = definePartsStyle((props) => {
   const { theme } = props;
-  const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
+  const { focusBorderColor: ec } = getDefaults(props);
 
   return {
     field: {
       border: "2px solid",
       borderColor: "transparent",
-      bg: mode("gray.100", "whiteAlpha.50")(props),
+      bg: mode("whiteAlpha.200")(props),
       _hover: {
-        bg: mode("gray.200", "whiteAlpha.100")(props),
+        bg: mode("whiteAlpha.300")(props),
       },
       _readOnly: {
         boxShadow: "none !important",
@@ -163,8 +148,8 @@ const variantFilled = definePartsStyle((props) => {
         borderColor: getColor(theme, ec),
       },
       _focusVisible: {
-        bg: "transparent",
-        borderColor: getColor(theme, fc),
+        bg: "whiteAlpha.300",
+        borderColor: "transparent",
       },
     },
     addon: {
@@ -223,7 +208,6 @@ const variantUnstyled = definePartsStyle({
 });
 
 const variants = {
-  customStyle,
   outline: variantOutline,
   filled: variantFilled,
   flushed: variantFlushed,

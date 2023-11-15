@@ -28,11 +28,11 @@ const variantGhost = defineStyle((props) => {
 
   if (c === "gray") {
     return {
-      color: mode(`gray.800`, `whiteAlpha.900`)(props),
+      color: mode(`whiteAlpha.900`, `gray.100`)(props),
       _hover: {
-        bg: mode(`gray.100`, `whiteAlpha.200`)(props),
+        bg: mode(`whiteAlpha.300`)(props),
       },
-      _active: { bg: mode(`gray.200`, `whiteAlpha.300`)(props) },
+      _active: { bg: mode(`whiteAlpha.300`)(props) },
     };
   }
 
